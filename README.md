@@ -5,3 +5,7 @@
 - [沪江日语懒人模板传送门](https://zhuanlan.zhihu.com/p/24902283)
 
 - [沪江小D-jsonp测试](http://blog.nocode.site/anki-theme-hjbasic/)
+
+# HJdictOnline
+
+超级懒人模板，一共支持**英日法韩徳西**六种语言
