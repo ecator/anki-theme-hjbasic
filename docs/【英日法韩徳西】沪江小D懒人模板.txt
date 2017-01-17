@@ -1,0 +1,12 @@
+沪江小D懒人模板：
+导入HJdictOnline.apkg会导入六个模板：
+HJdictOnline-en：英语
+HJdictOnline-jp：日语
+HJdictOnline-fr：法语
+HJdictOnline-kr：韩语
+HJdictOnline-de：德语
+HJdictOnline-es：西语
+
+六个模板分别对应六中不同的语言，而用法都一样，只需要填写word字段即可，其他的单词释义以及发音都由模板自动查询完成，全程需要联网，电脑端播放音频需要安装插件498789867，手机端不需要任何设置。
+
+下载链接：https://raw.githubusercontent.com/ecator/anki-theme-hjbasic/master/HJdictOnline.apkg
