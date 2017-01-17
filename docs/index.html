@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>沪江小D-jsonp测试</title>
+		<script type="text/javascript">
+			//定义沪江回调函数
+			var HJ = {
+				fun:{
+					jsonCallBack:function(data){wrapContent(data.content)},
+					changeLanguage:function(){}
+					}
+			}
+			//处理结果并显示
+			function wrapContent(content){
+				var raw=document.getElementById('raw')
+				var render=document.getElementById('render')
+				raw.innerText=content
+				render.innerHTML=content
+			}
+			//向沪江发起jsonp请求
+			function getTrans(inputId){
+				var word=document.getElementById(inputId).value
+				var requestScript=document.createElement('script')
+				var requestSrc=''
+				if(!word){
+					alert('请输入有效单词')
+					return
+				}
+				//根据语言做不同请求
+				switch(inputId){
+					case 'en':
+						//英语
+						requestSrc='http://dict.hjenglish.com/services/huaci/xml_web_ajax.ashx?w='+encodeURI(word)
+						break
+					case 'jc':
+						//日语
+						requestSrc='http://dict.hjenglish.com/services/huaci/jp_web_ajax.ashx?type=jc&w='+encodeURI(word)
+						break
+					case 'fr':
+						//法语
+						requestSrc='http://dict.hjenglish.com/services/huaci/fr_web_ajax.ashx?w='+encodeURI(word)
+						break
+					case 'kr':
+						//韩语
+						requestSrc='http://dict.hjenglish.com/services/huaci/kr_web_ajax.ashx?w='+encodeURI(word)
+						break
+					case 'de':
+						//德语
+						requestSrc='http://dict.hjenglish.com/services/huaci/de_web_ajax.ashx?langType=de&w='+encodeURI(word)
+						break
+					case 'es':
+						//西语
+						requestSrc='http://dict.hjenglish.com/services/huaci/es_web_ajax.ashx?langType=es&w='+encodeURI(word)
+						break
+					default:
+						alert('无效的语种')
+						return
+				}
+				requestScript.setAttribute('src',requestSrc)
+				document.getElementsByTagName('head')[0].appendChild(requestScript)
+			}
+		</script>
+		<style type="text/css">
+			button{
+				cursor:pointer;
+			}
+			code{
+				display:block;
+				border: 1px solid red;
+			}
+			.render{
+				border: 1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+	<div class="input">
+		<h1>输入测试单词</h1>
+		<input type="text" id='en' value="english"><button onclick="getTrans('en')">英中</button>&nbsp;
+		<input type="text" id='jc' value="日本語"><button onclick="getTrans('jc')">日中</button>&nbsp;
+		<input type="text" id='fr' value="française"><button onclick="getTrans('fr')">法中</button><br><br>
+		<input type="text" id='kr' value="한국어"><button onclick="getTrans('kr')">韩中</button>&nbsp;
+		<input type="text" id='de' value="Deutsch"><button onclick="getTrans('de')">德中</button>&nbsp;
+		<input type="text" id='es' value="España"><button onclick="getTrans('es')">西中</button>
+	</div>
+	<div class="result">
+		<h1>返回HTML源代码</h1>
+		<code class="raw" id="raw" cols='80' rows="10"></code>
+		<h1>返回HTML解析结果</h1>
+		<div class="render" id="render"></div>
+	</div>
+	</body>
+</html>
