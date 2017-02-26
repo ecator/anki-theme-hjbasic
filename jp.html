@@ -4,38 +4,67 @@
 	<title>HJdictOnline-jp</title>
 	<meta charset="utf-8">
 	<meta name="viweport" content="width=device-width,user-scalable=0,initial-scale=1,maxiuum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/_hjdict_online_style.css">
 	<style type="text/css">
+		h1{
+			text-align: center;
+		}
 		.container{
-			border:1px solid blue;
-			width: 900px;
+			border:0px solid blue;
+			width: 80%;
 			height: 500px;
-			margin: 10px auto;
+			margin: 5px auto;
 		}
 		.content{
-			border:1px solid red;
-			width: 600px;
+			border:0px solid red;
+			width: 90%;
 			height: 400px;
-			margin: 20px auto;
+			margin: 5px auto;
 		}
 		.controller{
-			border:1px solid gray;
-			width: 800px;
+			border:0px solid gray;
+			width: 90%;
 			height: 30px;
-			margin: 10px auto;
+			margin: 5px auto;
 			text-align: center;
 		}
 	</style>
+	<!-- 加载配置文件,会引入一个全局变量config -->
+	<script type="text/javascript" src="js/config.js"></script>
+	<!-- 加载公共库文件 -->
+	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript">
-		
+		var wordIndex=0//单词索引
+		//显示卡片背面
+		function showAns() {
+			var content=document.getElementById("content")
+			var controller=document.getElementById("controller")
+			content.innerHTML=config.tpl.back.replace(/{{word}}/g,config.jp.words[wordIndex])
+			controller.innerHTML="<button id=\"showFront\" onclick=\"showFront()\">显示正面</button>&nbsp;<button id=\"showNext\" onclick=\"showNext()\">显示下一个</button>"
+			getTrans()
+		}
+		//显示卡片正面
+		function showFront(){
+			var content=document.getElementById("content")
+			var controller=document.getElementById("controller")
+			content.innerHTML=config.tpl.front.replace(/{{word}}/g,config.jp.words[wordIndex])
+			controller.innerHTML="<button id=\"showAns\" onclick=\"showAns()\">显示答案</button>"
+		}
+		//显示下一个单词，数组循环
+		function showNext(){
+			wordIndex=wordIndex==config.jp.words.length-1?0:wordIndex+1
+			showFront()
+		}
 	</script>
 </head>
 <body>
 <h1>HJdictOnline-jp</h1>
 <div class="container">
-	<div class="content" id="content">
-		<div onclick="window.event.cancelBubble = true" class="word front">暗記</div>
-	</div>
-	<div class="controller" id="controller"><button id="showAns">显示答案</button></div>
+	<div class="content card" id="content"></div>
+	<div class="controller" id="controller"></div>
 </div>
+<script type="text/javascript">
+	showFront()
+</script>
 </body>
 </html>
