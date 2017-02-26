@@ -5,15 +5,19 @@ function define(){
 		for(var dep in arguments[0]){
 			loadjs(arguments[0][dep])
 		}
+		arguments[1]()
 	}else if (typeof(arguments[0]=='function')) {
-		console.log(arguments[0])
+		// console.log(arguments[0])
+		arguments[0]()
 	}
 }
 function loadjs(filename){
 	var script=document.createElement("script")
-	script.setAttribute("src",filename+'.js')
+	script.setAttribute("src",baseurl+filename+'.js')
 	document.head.appendChild(script)
 }
+//获取自身baseurl
+var baseurl=document.getElementsByTagName("script")[document.getElementsByTagName("script").length-1].getAttribute("data-baseurl")
 //语言和加载的js文件映射
 var lanMap=[]
 lanMap['jp']="jp"
