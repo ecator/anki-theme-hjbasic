@@ -17,7 +17,21 @@ function loadjs(filename){
 	document.head.appendChild(script)
 }
 //获取自身baseurl
-var baseurl=document.getElementsByTagName("script")[document.getElementsByTagName("script").length-1].getAttribute("data-baseurl")
+function getBaseurl(){
+var script=document.getElementsByTagName("script")[document.getElementsByTagName("script").length-1]
+if(script.getAttribute("data-baseurl")){
+	return script.getAttribute("data-baseurl")
+
+}else
+{
+	var tmp=script.src.split('/')
+	console.log(tmp)
+	tmp.pop()
+	return tmp.join("/")+"/"
+}
+}
+var baseurl=getBaseurl()
+console.log(baseurl)
 //语言和加载的js文件映射
 var lanMap=[]
 lanMap['jp']="jp"
