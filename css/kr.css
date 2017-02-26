@@ -1,6 +1,6 @@
 .card {
- font-family:Malgun Gothic;
+	font-family:Malgun Gothic;
 }
-#hjd_pronounce_pronounce, #hjd_uk_pronounce_pronounce{
-	font-style: Malgun Gothic;
+#hjd_langs+span{
+	font-family:Malgun Gothic;
 }
