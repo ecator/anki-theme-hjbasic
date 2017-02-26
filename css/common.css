@@ -60,6 +60,30 @@ div{
     padding: 2px;
     margin-right: 6px;
 }
+#hjd_pronounce_pronounce, #hjd_uk_pronounce_pronounce{
+    color: orange;
+    font-size: 14px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+.darkgray {
+    color: #999;
+}
+#hjd_pro_split {
+    color: #DFDFDF;
+    margin-right: 8px;
+}
+#hjd_txtresult .kr_comment {
+    font-size: 12px;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+#hjd_panel_feedback {
+    clear: both;
+    font-size: 12px;
+    margin: 8px auto 10px 3px;
+}
+
 a,a:visited{
     margin-right: 5px;
     color: #76AC30;
@@ -73,7 +97,9 @@ a:hover{
 .hjd_add_myword{
    display:none
 }
-
+#hjd_amw_panel{
+ display:none
+}
 /*移动端和PC端音频图标样式*/
 .playbutton{
    width:20px;
