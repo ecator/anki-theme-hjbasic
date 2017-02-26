@@ -14,7 +14,7 @@ function wrapContent(content){
  //处理音频链接
  for(var i=0;i<audioSpans.length;i++){
  	var audioSrc=audioSpans[i].lastChild.innerText
- 	audioSpans[i].innerHTML="<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='https://github.com/ecator/anki-theme-hjbasic/raw/master/img/_hjsound.gif'>"
+ 	audioSpans[i].innerHTML="<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='http://ecator.github.io/anki-theme-hjbasic/img/sound.gif'>"
  }
 }
 //向沪江请求单词释义
