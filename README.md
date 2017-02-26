@@ -6,7 +6,7 @@
 
 超级懒人模板，一共支持**英日法韩徳西**六种语言
 
-- [支付传送门](https://zhuanlan.zhihu.com/p/24902283)
+- [知乎传送门](https://zhuanlan.zhihu.com/p/24902283)
 - [沪江小D-jsonp测试](http://ecator.github.io/anki-theme-hjbasic/)
 - 在线模板预览
 	- [HJdictOnline-en：英语](http://ecator.github.io/anki-theme-hjbasic/en.html)
