@@ -7,7 +7,6 @@ var HJ={
 }
 }
 
-
 //播放音频
 function playAudio(audioSrc) {
 // alert(audioSrc)

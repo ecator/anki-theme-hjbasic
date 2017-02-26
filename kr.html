@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HJdictOnline-jp</title>
+	<title>HJdictOnline-en</title>
 	<meta charset="utf-8">
 	<meta name="viweport" content="width=device-width,user-scalable=0,initial-scale=1,maxiuum-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/kr.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
 	<!-- 加载配置文件,会引入一个全局变量config -->
 	<script type="text/javascript" src="js/config.js"></script>
 	<!-- 加载公共库文件 -->
 	<script type="text/javascript" src="js/common.js"></script>
-	<!-- 加载日语wrapContent方法 -->
-	<script type="text/javascript" src="js/wrapcontent/jp.js"></script>
-	<!-- 加载日语getTrans方法 -->
-	<script type="text/javascript" src="js/gettrans/jp.js"></script>
+	<!-- 加载wrapContent方法 -->
+	<script type="text/javascript" src="js/wrapcontent/common.js"></script>
+	<!-- 加载getTrans方法 -->
+	<script type="text/javascript" src="js/gettrans/kr.js"></script>
 	<!-- 加载控制函数 -->
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript">
 		//注入相应语言单词列表
-		var words=config.jp.words
+		var words=config.kr.words
 		var wordIndex=0//单词索引
 	</script>
 </head>
