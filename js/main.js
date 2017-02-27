@@ -1,4 +1,14 @@
 //入口模块
+//检测是否有版本更新
+var lastVersion='2.0'
+if (version!=lastVersion) {
+	if(!document.querySelector(".version")){
+		var div=document.createElement('div')
+		div.setAttribute('class',"version")
+		div.innerHTML="发现新版本"+lastVersion+"(当前版本"+version+")<a href='https://raw.githubusercontent.com/ecator/anki-theme-hjbasic/master/HJdictOnline.apkg'>点我</a>更新"
+		document.body.appendChild(div)
+	}
+}
 //加载js文件函数
 function loadjs(filename){
 	var script=document.createElement("script")

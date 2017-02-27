@@ -8,6 +8,10 @@
 div{
    margin:5px auto;
 }
+.version{
+  text-align: center;
+  font-size: 12px;
+}
 .word{
    font-weight: bold;
    color:#4d8606;
