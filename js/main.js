@@ -21,9 +21,6 @@ if(script.getAttribute("data-baseurl")){
 }
 var baseurl=getBaseurl()
 // console.log(baseurl)
-//语言和加载的js文件映射
-var lanMap=[]
-lanMap['jp']="jp"
 
 //沪江两个回调函数，用于处理jsonp
 //HJ.fun.jsonCallBack
@@ -38,12 +35,12 @@ HJ={
 	}
 
 //加载依赖模块
-loadjs("playaudio")
-loadjs("wrapcontent/"+lanMap[language])
-loadjs("gettrans/"+lanMap[language])
+loadjs("playAudio")
+loadjs("wrapContent")
+loadjs("getTrans")
 
-//执行程序
-function initialjs(){
-	typeof(getTrans)=="function"?getTrans():setTimeout(initialjs,1000)
+//执行anki的js代码，入口为getTrans函数
+function initialAnki(){
+	typeof(getTrans)=="function"?getTrans():setTimeout(initialAnki,1000)
 }
-setTimeout(initialjs,1000)
+setTimeout(initialAnki,1000)

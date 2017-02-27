@@ -12,6 +12,7 @@ h1{
 	width: 90%;
 	height: 400px;
 	margin: 5px auto;
+	overflow: auto;
 }
 .controller{
 	border:0px solid gray;

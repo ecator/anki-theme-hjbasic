@@ -18,6 +18,6 @@
 
 # server.sh
 
-快速在当前目录建立端口826的web服务器，用于测试。
+快速在当前目录建立端口666的web服务器，用于测试。
 
-运行`./server.sh`，然后访问`http://localhost:826/`即可
+运行`./server.sh`，然后访问`http://localhost:666/`即可
