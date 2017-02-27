@@ -1,16 +1,5 @@
-//定义define函数
-function define(){
-	if(typeof(arguments[0])=='object'){
-		// console.log(arguments[0])
-		for(var dep in arguments[0]){
-			loadjs(arguments[0][dep])
-		}
-		arguments[1]()
-	}else if (typeof(arguments[0]=='function')) {
-		// console.log(arguments[0])
-		arguments[0]()
-	}
-}
+//入口模块
+//加载js文件函数
 function loadjs(filename){
 	var script=document.createElement("script")
 	script.setAttribute("src",baseurl+filename+'.js')
@@ -25,27 +14,36 @@ if(script.getAttribute("data-baseurl")){
 }else
 {
 	var tmp=script.src.split('/')
-	console.log(tmp)
+	// console.log(tmp)
 	tmp.pop()
 	return tmp.join("/")+"/"
 }
 }
 var baseurl=getBaseurl()
-console.log(baseurl)
+// console.log(baseurl)
 //语言和加载的js文件映射
 var lanMap=[]
 lanMap['jp']="jp"
 
-define(["wrapcontent/"+lanMap[language],"gettrans/"+lanMap[language],"playaudio"],function(){
-	//沪江两个回调函数，用于处理jsonp
-	//HJ.fun.jsonCallBack
-	//HJ.fun.changeLanguage
-	window["HJ"]={
-		fun:{
-			jsonCallBack:function(data){
-				wrapContent(data.content)
-			},
+//沪江两个回调函数，用于处理jsonp
+//HJ.fun.jsonCallBack
+//HJ.fun.changeLanguage
+HJ={
+	fun:{
+		jsonCallBack:function(data){
+			wrapContent(data.content)
+		},
 		changeLanguage:function(){}
 		}
 	}
-	})
+
+//加载依赖模块
+loadjs("playaudio")
+loadjs("wrapcontent/"+lanMap[language])
+loadjs("gettrans/"+lanMap[language])
+
+//执行程序
+function initialjs(){
+	typeof(getTrans)=="function"?getTrans():setTimeout(initialjs,1000)
+}
+setTimeout(initialjs,1000)

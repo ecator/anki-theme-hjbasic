@@ -15,3 +15,9 @@
 	- [HJdictOnline-kr：韩语](http://ecator.github.io/anki-theme-hjbasic/kr.html)
 	- [HJdictOnline-de：德语](http://ecator.github.io/anki-theme-hjbasic/de.html)
 	- [HJdictOnline-es：西语](http://ecator.github.io/anki-theme-hjbasic/es.html)
+
+# server.sh
+
+快速在当前目录建立端口826的web服务器，用于测试。
+
+运行`./server.sh`，然后访问`http://localhost:826/`即可
