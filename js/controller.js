@@ -4,7 +4,7 @@ function showAns() {
 	var controller=document.getElementById("controller")
 	content.innerHTML=config.tpl.back.replace(/{{word}}/g,words[wordIndex])
 	controller.innerHTML="<button id=\"showFront\" onclick=\"showFront()\">显示正面</button>&nbsp;<button id=\"showNext\" onclick=\"showNext()\">显示下一个</button>"
-	getTrans()
+	requestjs("js/main.js")
 }
 //显示卡片正面
 function showFront(){
@@ -12,6 +12,7 @@ function showFront(){
 	var controller=document.getElementById("controller")
 	content.innerHTML=config.tpl.front.replace(/{{word}}/g,words[wordIndex])
 	controller.innerHTML="<button id=\"showAns\" onclick=\"showAns()\">显示答案</button>"
+	requestjs("js/main.js")
 }
 //显示下一个单词，数组循环
 function showNext(){

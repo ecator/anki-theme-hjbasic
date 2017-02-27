@@ -9,11 +9,15 @@
 	<script type="text/javascript">
 		//设置全部语言
 		var language="jp"
+		//加载远程js函数
+		function requestjs(url){
+		 var script=document.createElement("script")
+		 script.setAttribute("src",url)
+		 document.body.appendChild(script)
+		}
 	</script>
 	<!-- 加载配置文件,会引入一个全局变量config -->
 	<script type="text/javascript" src="js/config.js"></script>
-	<!-- 加载入口文件 -->
-	<script type="text/javascript" src="js/main.js"></script>
 	<!-- 加载控制函数 -->
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript">

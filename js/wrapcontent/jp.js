@@ -2,6 +2,7 @@
 //本方法处理日语结果
 var wrapContent=function (content){
 		var trans = document.getElementById('trans')
+		if (!trans) {return}
 		trans.innerHTML=content
 		var audioSpans=document.querySelectorAll('span[title=日语发音]')
  //处理音频链接
