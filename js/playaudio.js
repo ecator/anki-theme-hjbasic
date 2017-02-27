@@ -1,4 +1,4 @@
-
+//播放音频函数，需要传入音频地址
 var playAudio=function(audioSrc){
 	// alert(audioSrc)
  	//判断是否为PC端，PC和移动端的播放方式不一样
