@@ -1,14 +1,14 @@
 //播放音频函数，需要传入音频地址
-var playAudio=function(audioSrc){
+function playAudio(audioSrc){
 	// alert(audioSrc)
  	//判断是否为PC端，PC和移动端的播放方式不一样
  	if(typeof(py)=="object"){
  	//PC端，需要代码为498789867的插件依赖
- 		py.link("ankiplay"+audioSrc)
- 	}else{
- 		//移动端
- 		var player=document.createElement('audio')
- 		player.src=audioSrc
- 		player.play()
- 		}
+ 	py.link("ankiplay"+audioSrc)
+ }else{
+ 	//移动端
+ 	var player=document.createElement('audio')
+ 	player.src=audioSrc
+ 	player.play()
  	}
+ }
