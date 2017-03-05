@@ -18,9 +18,16 @@ function wrapContent(content){
  		//日语的音频链接需要特殊处理
  		var audioSrc=language=='jp'?audioSpans[i].lastChild.innerText:audioSpans[i].innerText
  		audioSpans[i].innerHTML="&nbsp;<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='http://ecator.github.io/anki-theme-hjbasic/img/sound.gif'>"
- 		//英语需要加载多个音频
- 		if(i>0 && language!='en'){
- 		audioSpans[i].innerHTML=""
+ 		//英语和日语可能需要加载多个音频
+ 		if(i>0){
+ 			switch(language){
+ 				case 'en':
+ 					break
+ 				case 'jp':
+ 					break
+ 				default:
+ 					audioSpans[i].innerHTML=""
+ 			}
  		}
 	}
 }

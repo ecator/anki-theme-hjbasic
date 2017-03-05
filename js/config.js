@@ -8,7 +8,7 @@ var config={
 	},
 	baseUrl:"http://ecator.github.io/anki-theme-hjbasic/",
 	jp:{
-		words:new Array("暗記","日本語","こんにちは")		
+		words:new Array("暗記","日本語","こんにちは","棺")		
 	},
 	de:{
 		words:new Array("Deutsch","Hallo")
