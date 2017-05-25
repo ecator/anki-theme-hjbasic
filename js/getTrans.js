@@ -9,12 +9,12 @@ function getTrans(){
 	}
 	//语言请求地址映射
 	var srcMap={
-		"de":"http://dict.hjenglish.com/services/huaci/de_web_ajax.ashx?langType=de&w=",
-		"jp":"http://dict.hjenglish.com/services/huaci/jp_web_ajax.ashx?type=jc&w=",
-		"en":"http://dict.hjenglish.com/services/huaci/xml_web_ajax.ashx?w=",
-		"fr":"http://dict.hjenglish.com/services/huaci/fr_web_ajax.ashx?w=",
-		"kr":"http://dict.hjenglish.com/services/huaci/kr_web_ajax.ashx?w=",
-		"es":"http://dict.hjenglish.com/services/huaci/es_web_ajax.ashx?langType=es&w="
+		"de":"https://dict.hjenglish.com/services/huaci/de_web_ajax.ashx?langType=de&w=",
+		"jp":"https://dict.hjenglish.com/services/huaci/jp_web_ajax.ashx?type=jc&w=",
+		"en":"https://dict.hjenglish.com/services/huaci/xml_web_ajax.ashx?w=",
+		"fr":"https://dict.hjenglish.com/services/huaci/fr_web_ajax.ashx?w=",
+		"kr":"https://dict.hjenglish.com/services/huaci/kr_web_ajax.ashx?w=",
+		"es":"https://dict.hjenglish.com/services/huaci/es_web_ajax.ashx?langType=es&w="
 	}
 	var script=document.createElement('script')
 	script.setAttribute('src',srcMap[language]+encodeURI(word))

@@ -17,7 +17,7 @@ function wrapContent(content){
  	for(var i=0;i<audioSpans.length;i++){
  		//日语的音频链接需要特殊处理
  		var audioSrc=language=='jp'?audioSpans[i].lastChild.innerText:audioSpans[i].innerText
- 		audioSpans[i].innerHTML="&nbsp;<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='http://ecator.github.io/anki-theme-hjbasic/img/sound.gif'>"
+ 		audioSpans[i].innerHTML="&nbsp;<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='https://ecator.github.io/anki-theme-hjbasic/img/sound.gif'>"
  		//英语和日语可能需要加载多个音频
  		if(i>0){
  			switch(language){

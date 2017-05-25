@@ -6,7 +6,7 @@ var config={
 		front:"<div onclick=\"window.event.cancelBubble = true\" class=\"word front\">{{word}}</div>",
 		back:"<div class=\"word back\" id=\"word\">{{word}}</div><div class=\"trans\" id=\"trans\"><center><img src=\"img/loading.gif\"></center></div>"
 	},
-	baseUrl:"http://ecator.github.io/anki-theme-hjbasic/",
+	baseUrl:"https://ecator.github.io/anki-theme-hjbasic/",
 	jp:{
 		words:new Array("暗記","日本語","こんにちは","棺")		
 	},
