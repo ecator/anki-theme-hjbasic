@@ -13,12 +13,12 @@
 另外为了方便调试（预览）在Anki中的运行效果，特别写了一个模拟Anki环境的web页面，分别是根目录下的en.html、jp.html、fr.html、kr.html、de.html、es.html文件，打开对应页面即可在线预览对应的模板效果，具体实现逻辑可参考页面源代码。
 
 - 模板在线预览
-	- [HJdictOnline-en：英语](http://ecator.github.io/anki-theme-hjbasic/en.html)
-	- [HJdictOnline-jp：日语](http://ecator.github.io/anki-theme-hjbasic/jp.html)
-	- [HJdictOnline-fr：法语](http://ecator.github.io/anki-theme-hjbasic/fr.html)
-	- [HJdictOnline-kr：韩语](http://ecator.github.io/anki-theme-hjbasic/kr.html)
-	- [HJdictOnline-de：德语](http://ecator.github.io/anki-theme-hjbasic/de.html)
-	- [HJdictOnline-es：西语](http://ecator.github.io/anki-theme-hjbasic/es.html)
+	- [HJdictOnline-en：英语](https://ecator.github.io/anki-theme-hjbasic/en.html)
+	- [HJdictOnline-jp：日语](https://ecator.github.io/anki-theme-hjbasic/jp.html)
+	- [HJdictOnline-fr：法语](https://ecator.github.io/anki-theme-hjbasic/fr.html)
+	- [HJdictOnline-kr：韩语](https://ecator.github.io/anki-theme-hjbasic/kr.html)
+	- [HJdictOnline-de：德语](https://ecator.github.io/anki-theme-hjbasic/de.html)
+	- [HJdictOnline-es：西语](https://ecator.github.io/anki-theme-hjbasic/es.html)
 
 # server.sh
 
