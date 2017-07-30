@@ -11,7 +11,9 @@ function wrapContent(content){
 		"kr":".sound_ico",
 		"es":".sound_ico"
 	}
-	trans.innerHTML=content
+	//处理图片,有些图片的src是以“//”开头，得加上http协议名
+	content = content.replace(new RegExp("'//dict\\.hjenglish\\.com/images/icon_star\\.gif'","g"),"'http://dict.hjenglish.com/images/icon_star.gif'")
+	trans.innerHTML = content
 	var audioSpans=document.querySelectorAll(queryMap[language])
 	 //处理音频链接
  	for(var i=0;i<audioSpans.length;i++){
@@ -29,13 +31,5 @@ function wrapContent(content){
  					audioSpans[i].innerHTML=""
  			}
  		}
-	}
-	//处理图片,有些图片的src是以“//”开头，得加上http协议名
-	var imgs = document.querySelectorAll("img[src^='//']")
-	for (var i = 0; i < imgs.length; i++) {
-		// console.log(imgs[i].src)
-		//直接取src属性系统会补全协议（Anki中变成file协议），所以需要手动取出地址
-		var src = imgs[i].src.substr(imgs[i].src.indexOf("//")+2)
-		imgs[i].src = "http://" + src
 	}
 }
