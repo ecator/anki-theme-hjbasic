@@ -18,7 +18,9 @@ function wrapContent(content){
 	 //处理音频链接
  	for(var i=0;i<audioSpans.length;i++){
  		//日语的音频链接需要特殊处理
- 		var audioSrc=language=='jp'?audioSpans[i].lastChild.innerText:audioSpans[i].innerText
+ 		//var audioSrc=language=='jp'?audioSpans[i].lastChild.innerText:audioSpans[i].innerText
+ 		//日语更换为百度音源
+ 		var audioSrc=language=='jp'?"http://fanyi.baidu.com/gettts?lan=jp&text="+encodeURI(content.match(new RegExp('class="hjd_Green".*?\\[(.*?)\\]'))[1])+"&source=web":audioSpans[i].innerText
  		audioSpans[i].innerHTML="&nbsp;<img class='playbutton' onclick='playAudio(\""+audioSrc+"\")' src='http://anki-theme-hjbasic.nocode.site/img/sound.gif'>"
  		//英语和日语可能需要加载多个音频
  		if(i>0){
