@@ -1,12 +1,16 @@
 //入口模块
 //检测是否有版本更新
-var lastVersion='2.0.2'
+var lastVersion='2.0.3'
 if (version!=lastVersion) {
 	if(!document.querySelector(".version")){
-		var div=document.createElement('div')
-		div.setAttribute('class',"version")
-		div.innerHTML="发现新版本"+lastVersion+"(当前版本"+version+")<a href='https://raw.githubusercontent.com/ecator/anki-theme-hjbasic/master/HJdictOnline.apkg'>点我</a>更新"
-		document.body.appendChild(div)
+		//var div=document.createElement('div')
+		//div.setAttribute('class',"version")
+		//div.innerHTML="发现新版本"+lastVersion+"(当前版本"+version+")<a href='https://raw.githubusercontent.com/ecator/anki-theme-hjbasic/master/HJdictOnline.apkg'>点我</a>更新"
+		//document.body.appendChild(div)
+		var words=document.getElementsByClassName('word')
+		for (var i = words.length - 1; i >= 0; i--) {
+			words[i].innerText="由于沪江网站升级，本模版已于2018年2月5日失效，感谢一路陪伴！さようなら"
+		}
 	}
 }
 //加载js文件函数
